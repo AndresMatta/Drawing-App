@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Drawing App</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/bulma.css">
+      <script src="https://use.fontawesome.com/2b6f1bd227.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="assets/js/client.js"></script>
+   </head>
+   <body>
+
+   <nav class="nav has-shadow">
+     <div class="container">
+       <div class="nav-left">
+         <a class="nav-item">
+           <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+         </a>
+       </div>
+       <div class="nav-right nav-menu">
+         <a class="nav-item is-tab" onclick="clearIt()"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></a> 
+       </div>
+     </div>
+   </nav>
+      
+   <div class="columns">
+      <div class="column is-9">
+         <div class="paint">
+            <canvas id="drawing"></canvas>    
+         </div>
+
+         <div class="column is-3">
+            
+         </div>
+      </div>
+   </div>       
+              
+   </body>
+</html>

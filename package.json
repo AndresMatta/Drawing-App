@@ -1,0 +1,10 @@
+{
+	"name": "drawing-app",
+	"description": "Drawing app with Node.js and Sockets.io",
+	"author": "Andrés Matta",
+	"dependencies": {
+		"bulma": "^0.4.2",
+		"express": "4.x",
+		"socket.io": "^2.0.3"
+	}
+}

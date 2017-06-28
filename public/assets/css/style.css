@@ -1,0 +1,17 @@
+* { 
+   margin: 0;
+   padding: 0;
+}
+body, html{
+   width: 100%;
+   height: 100%;
+}
+#canvas {
+   	display: block;
+}
+.paint{
+	margin: 20px;
+	padding: none;
+	background:url('../img/bg.png') repeat #e4e4e4;
+	overflow:hidden;
+}
