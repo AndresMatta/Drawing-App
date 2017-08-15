@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
    var width   = window.innerWidth;
    var height  = window.innerHeight;
 
+
    // set canvas to full browser width/height
    canvas.width = width;
    canvas.height = height;
@@ -62,3 +63,31 @@ document.addEventListener("DOMContentLoaded", function() {
    mainLoop();
 
 });
+
+//Chat
+
+socket.on('messages', function(data) {  
+  console.log(data);
+  render(data);
+})
+
+function render (data) {  
+  var html = data.map(function(elem, index) {
+    return(`<div>
+              <strong>${elem.author}</strong>:
+              <em>${elem.text}</em>
+            </div>`);
+  }).join(" ");
+
+  document.getElementById('messages').innerHTML = html;
+}
+
+function addMessage(e) {  
+  var message = {
+    author: document.getElementById('username').value,
+    text: document.getElementById('texto').value
+  };
+
+  socket.emit('new-message', message);
+  return false;
+}

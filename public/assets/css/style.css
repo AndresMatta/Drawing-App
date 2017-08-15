@@ -15,3 +15,9 @@ body, html{
 	background:url('../img/bg.png') repeat #e4e4e4;
 	overflow:hidden;
 }
+
+.chat{
+	margin: 20px;
+	padding: 1em;
+	overflow:hidden;
+}

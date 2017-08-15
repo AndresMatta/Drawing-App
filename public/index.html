@@ -25,16 +25,38 @@
    </nav>
       
    <div class="columns">
-      <div class="column is-9">
-         <div class="paint">
+      <div id="paint" class="column is-9">
+         <div  class="paint">
             <canvas id="drawing"></canvas>    
          </div>
-
-         <div class="column is-3">
-            
-         </div>
       </div>
-   </div>       
-              
+
+      <div class="column is-3">
+        <div class="chat">
+          <div id="messages"></div>
+              <br/>
+              <form onsubmit="return addMessage(this)">
+                <div class="field">
+                  <p class="control has-icons-left has-icons-right">
+                    <input id="username" class="input" type="text" placeholder="Tu nombre">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user-circle"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <textarea id="texto" class="textarea" placeholder="Escribe algo!"></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-primary">Enviar</button>
+                  </div>  
+                </div>                
+              </form>
+        </div>
+      </div>
+    </div>         
    </body>
 </html>
